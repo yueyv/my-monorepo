@@ -36,6 +36,8 @@
     "pinia": "^2.2.2",
     "qs": "^6.13.1",
     "screenfull": "^6.0.2",
+    "unplugin-vue-router": "^0.15.0",
+    "vite-plugin-pages": "^0.33.1",
     "vue": "^3.4.37",
     "vue-echarts": "^7.0.3",
     "vue-i18n": "^9.14.0",
