@@ -1,0 +1,32 @@
+{
+  "name": "@my-monorepo/base-layout",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "exports": {
+    "./utils/*": "./src/utils/*",
+    "./components/*": "./src/components/*",
+    "./layouts/*": "./src/layouts/*",
+    "./router/*": "./src/router/*",
+    "./store/*": "./src/store/*",
+    "./plugins/*": "./src/plugins/*",
+    "./hooks/*": "./src/hooks/*",
+    "./constants/*": "./src/constants/*",
+    "./styles/*": "./src/styles/*"
+  },
+  "dependencies": {
+    "vue": "^3.4.37",
+    "resize-detector": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.29"
+  }
+}

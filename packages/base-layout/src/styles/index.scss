@@ -1,0 +1,364 @@
+// 全局 CSS 变量
+@import './variables.css';
+// Transition
+@import './transition.scss';
+// Element Plus
+@import './element-plus.scss';
+// Mixins
+@import './mixins.scss';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: var(--v3-body-text-color);
+  background-color: var(--v3-body-bg-color);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  @extend %scrollbar;
+}
+
+@font-face {
+  font-family: Source Han Sans CN Regular;
+  src: url('./fonts/Source Han Sans CN Regular.woff');
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.el-scrollbar__view {
+  height: 100%;
+}
+
+.custom-table.el-table {
+  th {
+    background-color: #d7e2f6 !important;
+    .cell {
+      color: #3f4143;
+      font-family: Source Han Sans CN Regular;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  tr {
+    font-family: Source Han Sans CN Regular;
+    font-size: 14px;
+    color: #606266;
+    font-weight: 400;
+  }
+}
+
+.custom-table.vxe-table {
+  .vxe-table--header-wrapper {
+    background-color: #d7e2f6 !important;
+    color: #3f4143;
+    font-family: Source Han Sans CN Regular;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .vxe-body--column {
+    padding: 0.5rem 0 !important;
+  }
+  .vxe-body--row.success-warning {
+    background-color: #fdf6ec;
+  }
+}
+
+.vxe-table--body-wrapper::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.vxe-table--body-wrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.vxe-table--body-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.3s background-color;
+}
+.vxe-table--body-wrapper::-webkit-scrollbar-corner {
+  background-color: #fff;
+}
+
+.custom-drawer.el-drawer {
+  .el-drawer__header {
+    font-family: Source Han Sans CN Regular;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 0px !important;
+  }
+  .el-drawer__body {
+    font-family: Source Han Sans CN Regular;
+  }
+}
+
+.el-form-item .el-form-item__content > .el-select {
+  width: 100% !important;
+  min-width: 160px !important;
+}
+
+.custom-tree.el-tree {
+  .el-checkbox.is-disabled {
+    display: none !important;
+  }
+  .el-tree-node.sub-module-node {
+    .el-checkbox.is-disabled + .el-tree-node__label {
+      .custom-node-label {
+        color: #0486fe;
+      }
+    }
+  }
+}
+
+// SSO网关样式
+// 定制样式
+.custom-dailog-no-header {
+  header {
+    display: none !important;
+  }
+}
+
+// 定制表格 header 样式
+.sso-table-header-cell {
+  background: #f5f7fa !important;
+  background-color: #f5f7fa !important;
+  box-shadow: inset 0px -1px 0px 0px rgba(235, 238, 245, 1) !important;
+}
+
+.el-menu-item.is-active {
+  background-color: var(--el-menu-hover-bg-color);
+}
+
+// 树结构
+.custom-tree.el-tree {
+  width: 100%;
+  .el-tree-node__expand-icon {
+    color: var(--el-color-primary-light-3);
+  }
+  .el-tree-node__expand-icon.is-leaf {
+    color: transparent;
+  }
+  .el-tree-node__content {
+    width: 100%;
+    height: 36px;
+    font-size: 14px;
+    color: #606266;
+    color: #606266;
+    font-weight: 500;
+    padding: 5px 0;
+    display: flex !important;
+    flex-direction: row;
+    .el-tree-node__label {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .el-tree-node__label.active {
+      background: linear-gradient(
+        135deg,
+        #00b10c 0%,
+        #00ff11 65%,
+        #00ff1117 100%
+      );
+      color: white;
+      border-radius: 0.325rem;
+    }
+  }
+  .tree-btns {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-end;
+    padding-right: 0.5rem;
+  }
+  .tree-ops {
+    position: absolute;
+    left: 40%;
+  }
+  .el-checkbox.is-disabled {
+    display: none !important;
+  }
+}
+.custom-tree.el-tree--highlight-current
+  .el-tree-node.is-current
+  > .el-tree-node__content {
+  background-color: var(--el-color-primary-light-9);
+  color: var(--el-color-primary-light-3);
+}
+.custom-tree.el-tree--highlight-current {
+  .el-tree-node__content:hover {
+    background-color: var(--el-color-primary-light-9);
+    font-weight: 600;
+    color: var(--el-color-primary-light-3);
+  }
+  .el-tree-node:focus > .el-tree-node__content {
+    background-color: var(--el-color-primary-light-9);
+    color: var(--el-color-primary-light-3);
+  }
+}
+// 角色树 只显示最后一级叶子节点
+.el-tree.roleTree {
+  .el-tree-node__content .el-checkbox {
+    display: none;
+  }
+  .el-tree-node__children .el-tree-node__content {
+    .el-checkbox {
+      display: flex;
+    }
+  }
+}
+
+// 表单内下拉框宽度撑满
+.el-form-item {
+  .el-form-item__content {
+    .el-radio__label {
+      width: 100%;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+  }
+  .el-form-item__content > .el-select {
+    width: 100% !important;
+    min-width: 200px !important;
+  }
+  .el-form-item__content > .el-input-number {
+    width: 100% !important;
+  }
+  .el-form-item__content > .el-button {
+    margin: 0 !important;
+  }
+}
+
+.custom-table.el-table-v2 {
+  .el-table-v2__header-row {
+    background-color: var(--el-color-primary-light-9);
+    .el-table-v2__header-cell {
+      background-color: var(--el-color-primary-light-9);
+      color: #3f4143;
+      font-family: Source Han Sans CN Regular;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 5px 10px;
+      .el-select {
+        background: transparent !important;
+        .el-select__wrapper {
+          background: transparent !important;
+        }
+      }
+      .el-input {
+        .el-input__wrapper {
+          background-color: transparent !important;
+          .el-input__inner {
+            color: #3f4143;
+            font-family: Source Han Sans CN Regular;
+            font-weight: 600;
+            font-size: 15px;
+          }
+          .el-input__suffix {
+            .el-input__suffix-inner {
+              .el-input__icon {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      input::placeholder {
+        color: #3f4143 !important;
+      }
+    }
+  }
+  .el-table-v2__row.warning-row {
+    background: #fae5e8;
+  }
+  .el-table-v2__row.highlight-row {
+    background: #f4f8be;
+  }
+  .el-table-v2__row.insert-row {
+    background: #e8f5e9;
+  }
+  .el-table-v2__row.update-row {
+    background: #fffde7;
+  }
+  .el-table-v2__row.warning-row:hover {
+    background: #ef9a9a !important;
+    color: #111;
+  }
+  .el-table-v2__row.highlight-row:hover {
+    background: #fff59d !important;
+    color: #111;
+  }
+  .el-table-v2__row.insert-row:hover {
+    background: #c8e6c9 !important;
+    color: #111;
+  }
+  .el-table-v2__row.update-row:hover {
+    background: #fff9c4 !important;
+    color: #111;
+  }
+}
+
+// table 滚动条样式
+.custom-table ::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+.custom-table ::-webkit-scrollbar-thumb {
+  background-color: #dbd9d9;
+  border-radius: 5px;
+  border: 1px solid #f1f1f1;
+}
+.custom-table ::-webkit-scrollbar-corner {
+  background-color: #ffffff;
+}
+
+// 跨行Radio样式
+.custom-row-radio .el-radio {
+  display: block;
+  padding-left: 1rem;
+  line-height: 32px;
+}
+
+// vxe-table默认滚动条样式
+// 修改滚动条 宽 高
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+// 修改滚动条颜
+::-webkit-scrollbar-thumb {
+  background: var(--el-text-color-secondary);
+  opacity: var(--el-scrollbar-opacity);
+}
+
+/* 滚动条在鼠标悬停时的效果 */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--el-text-color-secondary);
+  opacity: var(-el-scrollbar-hover-opacity);
+}

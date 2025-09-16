@@ -1,0 +1,70 @@
+/** 全局 CSS 变量，这种变量不仅可以在 CSS 和 SCSS 中使用，还可以导入到 JS 中使用 */
+
+:root {
+  /** Body */
+  --admin-body-text-color: var(--el-text-color-primary);
+  --admin-body-bg-color: var(--el-bg-color-page);
+  /** Header 区域 = NavigationBar 组件 + TagsView 组件 */
+  --admin-header-height: calc(var(--admin-navigationbar-height) + var(--admin-tagsview-height));
+  --admin-header-bg-color: var(--el-bg-color);
+  --admin-header-box-shadow: var(--el-box-shadow-lighter);
+  --admin-header-border-bottom: 1px solid var(--el-fill-color);
+  /** NavigationBar 组件 */
+  --admin-navigationbar-height: 50px;
+  --admin-navigationbar-text-color: var(--el-text-color-regular);
+  /** Sidebar 组件（左侧模式全部生效、顶部模式全部不生效、混合模式非颜色部分生效） */
+  --admin-sidebar-width: 220px;
+  --admin-sidebar-hide-width: 58px;
+  --admin-sidebar-border-right: 1px solid var(--el-fill-color);
+  --admin-sidebar-menu-item-height: 60px;
+  --admin-sidebar-menu-tip-line-bg-color: var(--el-color-primary);
+  --admin-sidebar-menu-bg-color: #001428;
+  --admin-sidebar-menu-hover-bg-color: #409eff10;
+  --admin-sidebar-menu-text-color: #cfd3dc;
+  --admin-sidebar-menu-active-text-color: #ffffff;
+  /** TagsView 组件 */
+  --admin-tagsview-height: 34px;
+  --admin-tagsview-text-color: var(--el-text-color-regular);
+  --admin-tagsview-tag-active-text-color: #ffffff;
+  --admin-tagsview-tag-bg-color: var(--el-bg-color);
+  --admin-tagsview-tag-active-bg-color: var(--el-color-primary);
+  --admin-tagsview-tag-border-radius: 2px;
+  --admin-tagsview-tag-border-color: var(--el-border-color-lighter);
+  --admin-tagsview-tag-active-border-color: var(--el-color-primary);
+  --admin-tagsview-tag-icon-hover-bg-color: #00000030;
+  --admin-tagsview-tag-icon-hover-color: #ffffff;
+  --admin-tagsview-contextmenu-text-color: var(--el-text-color-regular);
+  --admin-tagsview-contextmenu-hover-text-color: var(--el-text-color-primary);
+  --admin-tagsview-contextmenu-bg-color: var(--el-bg-color-overlay);
+  --admin-tagsview-contextmenu-hover-bg-color: var(--el-fill-color);
+  --admin-tagsview-contextmenu-box-shadow: var(--el-box-shadow);
+  /** Hamburger 组件 */
+  --admin-hamburger-text-color: var(--el-text-color-primary);
+  /** RightPanel 组件  */
+  --admin-rightpanel-button-bg-color: #001428;
+  --el-color-primary: #0486fe !important;
+}
+
+/** 内容区放大时，将不需要的组件隐藏 */
+body.content-large {
+  /** Header 区域 = TagsView 组件 */
+  --admin-header-height: var(--admin-tagsview-height);
+  /** NavigationBar 组件 */
+  --admin-navigationbar-height: 0px;
+  /** Sidebar 组件 */
+  --admin-sidebar-width: 0px;
+  --admin-sidebar-hide-width: 0px;
+}
+
+/** 内容区全屏时，将不需要的组件隐藏 */
+body.content-full {
+  /** Header 区域 */
+  --admin-header-height: 0px;
+  /** NavigationBar 组件 */
+  --admin-navigationbar-height: 0px;
+  /** Sidebar 组件 */
+  --admin-sidebar-width: 0px;
+  --admin-sidebar-hide-width: 0px;
+  /** TagsView 组件 */
+  --admin-tagsview-height: 0px;
+}
