@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+html,
+body {
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
+  border: none !important;
+  border-image-width: 0 !important;
+  overflow: hidden;
+  font-size: var(--el-font-size-base);
+}
