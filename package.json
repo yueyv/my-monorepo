@@ -5,7 +5,7 @@
   "description": "monorepo项目管理",
   "license": "ISC",
   "devDependencies": {
-    "@my-monorepo/base-layout": "workspace:^",
+    "@my-monorepo/layout": "workspace:^",
     "@my-monorepo/utils": "workspace:^",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.5.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@my-monorepo/base-layout",
+  "name": "@my-monorepo/layout",
   "private": true,
   "version": "0.0.0",
   "type": "module",
