@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>垂直滚动 → 水平动画</title>
+    <style>
+      /* 基础重置 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 强制页面有足够垂直滚动空间（出现垂直滚动条） */
+      body {
+        height: 5000px; /* 页面总高度，决定垂直滚动的范围 */
+        overflow-x: hidden; /* 隐藏水平滚动条，只保留垂直 */
+      }
+
+      /* 核心容器：超宽、固定定位，作为水平滚动的载体 */
+      #horizontal-container {
+        position: fixed; /* 固定在视口，脱离文档流 */
+        top: 0;
+        left: 0;
+        width: 5000px; /* 超宽容器（核心：提供水平滚动的空间） */
+        height: 100vh; /* 高度占满视口 */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: transform 0.05s linear; /* 平滑过渡（可选） */
+      }
+
+      /* 演示用的内容块（方便看水平移动效果） */
+      .content-block {
+        width: 100vw; /* 每个块占满视口宽度 */
+        height: 80vh;
+        margin: 0 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        color: white;
+      }
+
+      /* 不同颜色区分内容块，直观看到水平移动 */
+      .block1 {
+        background: #ff8709;
+      }
+      .block2 {
+        background: #00bae2;
+      }
+      .block3 {
+        background: #0ae448;
+      }
+      .block4 {
+        background: #f7bdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 核心水平容器 -->
+    <div id="horizontal-container">
+      <!-- 演示用的内容块（可替换成你的内容） -->
+      <div class="content-block block1">区块 1</div>
+      <div class="content-block block2">区块 2</div>
+      <div class="content-block block3">区块 3</div>
+      <div class="content-block block4">区块 4</div>
+    </div>
+
+    <script>
+      // 核心逻辑：垂直滚动距离 → 水平位移映射
+      const container = document.getElementById('horizontal-container');
+      // 页面总垂直滚动高度（可滚动的总距离）
+      const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+      // 容器总水平可移动距离（超宽容器宽度 - 视口宽度）
+      const totalHorizontalRange = container.offsetWidth - window.innerWidth;
+
+      // 监听垂直滚动事件
+      window.addEventListener('scroll', () => {
+        // 1. 获取当前垂直滚动距离
+        const scrollTop = window.scrollY;
+        // 2. 计算滚动进度（0 ~ 1：从顶部滚到底部）
+        const scrollProgress = scrollTop / totalScrollHeight;
+        // 3. 映射为水平位移（反向位移，滚动越往下，容器越往左移）
+        const horizontalOffset = -scrollProgress * totalHorizontalRange;
+        // 4. 应用位移（translate3d开启GPU加速，更流畅）
+        container.style.transform = `translate3d(${horizontalOffset}px, 0, 0)`;
+      });
+    </script>
+  </body>
+</html>
