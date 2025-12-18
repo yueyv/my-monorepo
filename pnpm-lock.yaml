@@ -168,9 +168,15 @@ importers:
       '@pinia/nuxt':
         specifier: ^0.11.2
         version: 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.24(typescript@5.9.3)))
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
       '@types/postcss-pxtorem':
         specifier: ^6.1.0
         version: 6.1.0
+      '@types/three':
+        specifier: ^0.182.0
+        version: 0.182.0
       animate.css:
         specifier: ^4.1.1
         version: 4.1.1
@@ -180,12 +186,18 @@ importers:
       echarts:
         specifier: ^6.0.0
         version: 6.0.0
+      gsap:
+        specifier: ^3.14.2
+        version: 3.14.2
       ioredis:
         specifier: ^5.8.2
         version: 5.8.2
       konva:
         specifier: ^10.0.8
         version: 10.0.8
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
       mockjs:
         specifier: ^1.1.0
         version: 1.1.0
@@ -204,6 +216,9 @@ importers:
       postcss-pxtorem:
         specifier: ^6.1.0
         version: 6.1.0(postcss@8.5.6)
+      three:
+        specifier: ^0.182.0
+        version: 0.182.0
       unstorage:
         specifier: ^1.17.2
         version: 1.17.2(db0@0.3.4)(ioredis@5.8.2)
@@ -4065,6 +4080,9 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  gsap@3.14.2:
+    resolution: {integrity: sha512-P8/mMxVLU7o4+55+1TCnQrPmgjPKnwkzkXOK1asnR9Jg2lna4tEY5qBJjMmAaOBDDZWtlRjBXjLa0w53G/uBLA==}
 
   gzip-size@6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
@@ -8771,7 +8789,7 @@ snapshots:
 
   '@types/lodash-es@4.17.12':
     dependencies:
-      '@types/lodash': 4.17.7
+      '@types/lodash': 4.17.20
 
   '@types/lodash@4.17.20': {}
 
@@ -11237,6 +11255,8 @@ snapshots:
   gopd@1.2.0: {}
 
   graceful-fs@4.2.11: {}
+
+  gsap@3.14.2: {}
 
   gzip-size@6.0.0:
     dependencies:
