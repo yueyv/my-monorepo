@@ -1,16 +1,14 @@
-<template>
-  <div>
-    <h1>Animate</h1>
-  </div>
-</template>
+<template></template>
 
 <script setup lang="ts">
 definePageMeta({
-  title: 'UI 效果',
-  icon: ElIconMenu,
+  title: '3D效果',
+  icon: ElIconMoonNight,
   pageTransition: {
     name: 'page',
     mode: 'out-in',
   },
 });
 </script>
+
+<style scoped lang="scss"></style>

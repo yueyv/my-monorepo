@@ -12,3 +12,12 @@
   height: $footer-height;
 }
 </style>
+<style lang="scss">
+/* 全局样式：响应暗色主题 */
+html.dark {
+  .footer-container {
+    background-color: $dark-bottom-bg-color;
+    color: $dark-text-color;
+  }
+}
+</style>

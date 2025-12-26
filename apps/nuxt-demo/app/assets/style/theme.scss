@@ -1,5 +1,12 @@
+// 主题变量定义
 $primary-color: #007bff;
 $secondary-color: #6c757d;
-$header-height: 4rem;
-$footer-height: 4rem;
+$text-color: #333333;
+$dark-primary-color: #00656c;
+$dark-secondary-color: #999999;
+$dark-text-color: #ffffff;
+$header-height: 3rem;
+$footer-height: 3rem;
 $content-height: calc(100vh - $header-height - $footer-height);
+$dark-header-bg-color: $dark-primary-color;
+$dark-bottom-bg-color: $dark-primary-color;

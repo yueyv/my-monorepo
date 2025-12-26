@@ -7,10 +7,9 @@
 <script setup lang="ts">
 import { SYSTEM_THEME_DARK, SYSTEM_THEME_LIGHT } from '../../constant';
 import { useSystemStore } from '../../store';
-
+import 'element-plus/theme-chalk/dark/css-vars.css';
 const systemStore = useSystemStore();
 
-// 确保在客户端挂载时初始化主题（作为备用）
 onMounted(() => {
   if (import.meta.client) {
     systemStore.initTheme();

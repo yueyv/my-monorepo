@@ -8,3 +8,9 @@ h2 {
 * {
   box-sizing: border-box;
 }
+
+// 暗色主题全局样式
+html.dark {
+  color: $dark-text-color;
+  background-color: var(--el-bg-color-page);
+}
