@@ -20,6 +20,10 @@
 
 <style lang="scss">
 /* 全局样式：响应暗色主题 */
+.header-container {
+  background-color: $header-bg-color;
+}
+
 html.dark {
   .header-container {
     background-color: $dark-header-bg-color;
