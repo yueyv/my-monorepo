@@ -35,7 +35,7 @@ const props = defineProps({
     default: '',
   },
   width: {
-    type: Object as PropType<String | Number>,
+    type: Object as PropType<string | number>,
     default: '550px',
   },
   footer: {

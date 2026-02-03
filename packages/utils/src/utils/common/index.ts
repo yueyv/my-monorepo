@@ -160,7 +160,7 @@ function createJSONSheet(
   const headers = header.map(v => v.label);
   sheetData.push(headers);
   const props = header.map(v => v.prop);
-  for (let row of data) {
+  for (const row of data) {
     const rowData: any = [];
     for (const prop of props) {
       rowData.push(row[prop]);
@@ -259,7 +259,7 @@ export function json2ExcelMultipleSheet(
   fileName: string
 ) {
   const wb = utils.book_new();
-  for (let config of configs) {
+  for (const config of configs) {
     const ws = createJSONSheet(config.header, config.data, config.options);
     utils.book_append_sheet(wb, ws, config.options.sheetName);
   }
@@ -299,8 +299,8 @@ export function createDateList(
   format = 'YYYY-MM-DD'
 ): string[] {
   let startTime = dayjs(start);
-  let endTime = dayjs(end);
-  let result: string[] = [];
+  const endTime = dayjs(end);
+  const result: string[] = [];
   while (startTime.valueOf() <= endTime.valueOf()) {
     result.push(startTime.format(format));
     if (isString(interval)) {

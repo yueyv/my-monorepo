@@ -2,7 +2,7 @@ import { unref } from 'vue';
 import type { Injection } from './types';
 
 type Attrs = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   [key: string]: any;
 };
 

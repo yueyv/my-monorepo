@@ -67,12 +67,12 @@ export function formatSpaceWord(str: string) {
 
 // Resolves . and .. elements in a path with directory names
 function normalizeStringPosix(path: string, allowAboveRoot?: boolean) {
-  var res = '';
-  var lastSegmentLength = 0;
-  var lastSlash = -1;
-  var dots = 0;
-  var code;
-  for (var i = 0; i <= path.length; ++i) {
+  let res = '';
+  let lastSegmentLength = 0;
+  let lastSlash = -1;
+  let dots = 0;
+  let code;
+  for (let i = 0; i <= path.length; ++i) {
     if (i < path.length) code = path.charCodeAt(i);
     else if (code === 47 /*/*/) break;
     else code = 47 /*/*/;
@@ -87,7 +87,7 @@ function normalizeStringPosix(path: string, allowAboveRoot?: boolean) {
           res.charCodeAt(res.length - 2) !== 46 /*.*/
         ) {
           if (res.length > 2) {
-            var lastSlashIndex = res.lastIndexOf('/');
+            const lastSlashIndex = res.lastIndexOf('/');
             if (lastSlashIndex !== res.length - 1) {
               if (lastSlashIndex === -1) {
                 res = '';
@@ -136,11 +136,11 @@ function assertPath(path: string) {
 }
 
 export function resolve(..._: string[]) {
-  var resolvedPath = '';
-  var resolvedAbsolute = false;
-  var cwd = '/';
+  let resolvedPath = '';
+  let resolvedAbsolute = false;
+  const cwd = '/';
 
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+  for (let i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
     var path;
     if (i >= 0) path = arguments[i];
     else {
@@ -204,7 +204,7 @@ export function getImageDataURL(url: string, defaultImage = ''): Promise<string>
       return;
     }
     try {
-      let imageURL = url.startsWith('/') ? url.slice(1) : url;
+      const imageURL = url.startsWith('/') ? url.slice(1) : url;
       const file: Blob = await getImageBlob(imageURL);
       const dataUrl = await getFileDataUrl(file);
       resolve(dataUrl);
@@ -242,12 +242,12 @@ export function convertMenus(platMenus: PlatMenu[], menus: StandardMenu[]) {
   if (!platMenus) {
     return [];
   }
-  let tmenus = sortBy(platMenus, 'menuOrder');
+  const tmenus = sortBy(platMenus, 'menuOrder');
   tmenus.forEach((platMenu) => {
     // 排除按钮
     if (platMenu.menuType !== 3) {
       // 网关切换
-      let menu: StandardMenu = !platMenu.menuUrl.includes('@')
+      const menu: StandardMenu = !platMenu.menuUrl.includes('@')
         ? {
             path: '/' + snakeCase(platMenu.menuUrl),
             name: upperFirst(camelCase(platMenu.menuUrl)),

@@ -4,7 +4,7 @@ import { h } from 'vue';
 // vite里加载webpack module federation实现
 
 // 多个相同的script加载时，只加载一次
-let scriptPending = new Map<string, any[]>();
+const scriptPending = new Map<string, any[]>();
 
 /**
  * 加载远程js文件

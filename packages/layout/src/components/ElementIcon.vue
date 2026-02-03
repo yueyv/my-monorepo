@@ -15,7 +15,7 @@ defineProps({
     default: 'Eleme',
   },
   size: {
-    type: Object as PropType<String | Number>,
+    type: Object as PropType<string | number>,
     default: '24px',
   },
 });
