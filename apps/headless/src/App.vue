@@ -1,15 +1,13 @@
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="w-full h-screen flex justify-center p-4 bg-gray-100">
     <Menu />
-    <Tabs />
-    <Radio />
+    <!-- <Tabs />
+    <Radio /> -->
   </div>
 </template>
 
 <script setup lang="ts">
 import Menu from '@/components/menu.vue';
-import Tabs from '@/components/tabs.vue';
-import Radio from '@/components/radio.vue';
 </script>
 
 <style scoped></style>

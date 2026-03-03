@@ -1,0 +1,22 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "convert:png2avif": "node convertPng2Avif.js",
+    "add:avif-bg": "node addAvifBackgroundInVue.js",
+    "add:avif-import": "node addAvifImport.js",
+    "delete:reverse-avif": "node deleteReverseAvif.js",
+    "font-face:woff2": "node transformFontFaceInScss.js"
+  },
+  "dependencies": {
+    "glob": "^13.0.6",
+    "jscodeshift": "^17.3.0",
+    "sharp": "^0.34.5",
+    "ttf2woff2": "^8.0.0"
+  },
+  "devDependencies": {
+    "@vue/compiler-dom": "^3.5.29",
+    "@vue/compiler-sfc": "^3.5.29"
+  }
+}

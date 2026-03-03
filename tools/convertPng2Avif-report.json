@@ -1,0 +1,34 @@
+{
+  "正向": {
+    "描述": "体积减少（压缩有效）",
+    "数量": 2,
+    "列表": [
+      {
+        "pngPath": "C:\\Users\\yueyv\\Desktop\\code\\vpp-frontend\\apps\\vpp-screen\\src\\components\\noPermission\\bg.png",
+        "avifPath": "C:\\Users\\yueyv\\Desktop\\code\\vpp-frontend\\apps\\vpp-screen\\src\\components\\noPermission\\bg.avif",
+        "pngSizeKb": 2537.67,
+        "avifSizeKb": 75.16,
+        "reduceRatioPercent": 97.04
+      },
+      {
+        "pngPath": "C:\\Users\\yueyv\\Desktop\\code\\vpp-frontend\\apps\\vpp-screen\\src\\components\\noPermission\\NoPermission.png",
+        "avifPath": "C:\\Users\\yueyv\\Desktop\\code\\vpp-frontend\\apps\\vpp-screen\\src\\components\\noPermission\\NoPermission.avif",
+        "pngSizeKb": 22.74,
+        "avifSizeKb": 6.99,
+        "reduceRatioPercent": 69.25
+      }
+    ]
+  },
+  "反向": {
+    "描述": "体积增加或不变（未压缩或变大）",
+    "数量": 0,
+    "列表": []
+  },
+  "汇总": {
+    "转换总数": 2,
+    "原始总体积KB": 2560.41,
+    "AVIF总体积KB": 82.16,
+    "共减少体积KB": 2478.25,
+    "总体压缩率百分比": 96.79
+  }
+}
