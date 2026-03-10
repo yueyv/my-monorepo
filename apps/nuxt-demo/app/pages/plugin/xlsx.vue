@@ -11,7 +11,16 @@ definePageMeta({
     mode: 'out-in',
   },
 });
-
+const b = { xx: 1 };
+const a = ref(b);
+console.log(a.value.xx);
+b.xx = 2;
+console.log(a.value.xx);
+a.value.xx = 3;
+console.log(a.value.xx);
+b.xx = 4;
+a.value = b;
+console.log(a.value.xx);
 const handleImport = () => {
   const file = document.createElement('input');
   file.type = 'file';
